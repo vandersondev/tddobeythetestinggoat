@@ -1,1 +1,1 @@
-web: gunicorn superlist/wsgi.py
+web: gunicorn superlist.wsgi
