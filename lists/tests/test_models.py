@@ -53,8 +53,8 @@ class ListAndItemModelTest(TestCase):
         self.assertEqual(str(item), 'some text')
 
 
-    class ListModelTest(TestCase):
+class ListModelTest(TestCase):
 
-        def test_get_absolute_url(self):
-            list_ = List.objects.create()
-            self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
+    def test_get_absolute_url(self):
+        list_ = List.objects.create()
+        self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
