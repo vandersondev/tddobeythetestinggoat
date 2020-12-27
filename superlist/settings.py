@@ -26,7 +26,7 @@ SECRET_KEY = '*o3^t^w*n=k&)(33p@1brir3sjb_3b5l=5vs9!wk#fju@nzrem'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG_MODE'))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'vandtdd.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'vandtdd.herokuapp.com', '*']
 
 
 # Application definition
