@@ -1,0 +1,16 @@
+[Unit]
+
+Description=Gunicorn server for superlists.stg
+
+[Service]
+Restart=on-failure
+User=vanderson
+WorkingDirectory=/home/vanderson/sites/superlists.stg
+EnvironmentFile=/home/vanderson/sites/superlists.stg/.env
+
+ExecStart=/home/vanderson/sites/superlists.stg/env/bin/gunicorn \
+        --bind unix:/tmp/superlists.stg.socket \
+        superlist.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
